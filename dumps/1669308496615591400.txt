@@ -1,0 +1,29 @@
+POST / HTTP/1.1
+Connection: keep-alive
+Content-Length: 918
+Content-Type: text/plain
+Host: 127.0.0.1:1234
+User-Agent: Apache-HttpClient/4.5.7 (Java/1.8.0_321)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope
+        xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Header>
+    <ns1:RequestHeader
+         soapenv:actor="http://schemas.xmlsoap.org/soap/actor/next"
+         soapenv:mustUnderstand="0"
+         xmlns:ns1="https://www.google.com/apis/ads/publisher/v202211">
+      <ns1:networkCode>291685213</ns1:networkCode>
+      <ns1:applicationName>DfpApi-Java-2.1.0-dfp_test</ns1:applicationName>
+    </ns1:RequestHeader>
+  </soapenv:Header>
+  <soapenv:Body>
+    <getAdUnitsByStatement xmlns="https://www.google.com/apis/ads/publisher/v202211">
+      <filterStatement>
+        <query>Test string for ferexp 101</query>
+      </filterStatement>
+    </getAdUnitsByStatement>
+  </soapenv:Body>
+</soapenv:Envelope>
